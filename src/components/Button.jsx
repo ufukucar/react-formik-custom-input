@@ -4,7 +4,9 @@ import { Formik } from 'formik'
 const Button = ({ labelName, name, type, ...rest }) => {
   return (
     <>
-      <button className="defaultBtn mb-3">Kaydet</button>
+      <button type={type} className="defaultBtn mb-3 w-6/12">
+        Kaydet
+      </button>
     </>
   )
 }

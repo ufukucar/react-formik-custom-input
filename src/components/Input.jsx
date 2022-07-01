@@ -1,12 +1,18 @@
-import React from 'react'
-import { Formik } from 'formik'
+import { useField } from 'formik'
+import ErrorMessage from './ErrorMessage'
 
-const Input = ({ labelName, name, type, ...rest }) => {
+const Input = ({ label, ...props }) => {
+  const [field, meta, helpers] = useField(props)
+
   return (
     <>
-      <label className="block w-6/12 mb-6">
-        <span className="defaultSpan">{labelName}</span>
-        <input type={type} name={name} {...rest} className="defaultInput " />
+      <label className="formLabel">
+        <span className="defaultSpan">{label}</span>
+        <input {...field} {...props} className="defaultInput " />
+
+        {meta.touched && meta.error ? (
+          <ErrorMessage error={meta.error} />
+        ) : null}
       </label>
     </>
   )

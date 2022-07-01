@@ -7,7 +7,7 @@
 @layer components {
   .defaultBtn {
       @apply bg-blue-500 focus:bg-blue-600 
-      hover:bg-blue-600 text-white p-3 rounded-sm block w-6/12 transition-colors duration-100 ease-in-out;
+      hover:bg-blue-600 text-white p-3 rounded-sm block w-6/12 transition-colors duration-100 ease-in-out w-full
     }
   
     .defaultInput {
@@ -16,11 +16,20 @@
     }
 
     .defaultForm {
-      @apply block w-full flex justify-center  mt-5 w-6/12 mx-auto flex-col items-center overflow-hidden
+      @apply block flex justify-center  mt-5 w-6/12 mx-auto flex-col items-center overflow-hidden
     }
 
     .defaultSpan {
       @apply after:content-['*'] text-left after:ml-0.5 after:text-red-500 block  font-medium text-slate-700
     }
+
+    .formLabel {
+      @apply block w-6/12 mb-6
+    }
+
+    .defaultSelect {
+      @apply w-full border border-gray-400 rounded p-2 focus:outline-none
+    }
 }
+
 

@@ -1,10 +1,10 @@
 import './App.css'
-import Form from './pages/Form'
+import MainForm from './pages/MainForm'
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <MainForm />
     </div>
   )
 }
