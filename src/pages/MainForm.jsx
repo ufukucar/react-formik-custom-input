@@ -49,7 +49,7 @@ const MainForm = () => {
       // validateOnBlur={false}
     >
       {(props) => (
-        <div className="">
+        <div className="flex">
           <Form className="defaultForm">
             <Input label="Email" name="email" type="text" />
             <Input label="Şifre" name="password" type="text" />

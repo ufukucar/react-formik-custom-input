@@ -1,5 +1,3 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,16 +5,18 @@
 @layer components {
   .defaultBtn {
       @apply bg-blue-500 focus:bg-blue-600 
-      hover:bg-blue-600 text-white p-3 rounded-sm block w-6/12 transition-colors duration-100 ease-in-out w-full
+      hover:bg-blue-600 text-white p-3 rounded-sm block  transition-colors duration-100 ease-in-out
+      mb-3 w-8/12
     }
   
     .defaultInput {
-      @apply mt-1 p-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 
-        focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md  focus:ring-1
+      @apply mt-1 p-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400  
+        focus:outline-none focus:border-sky-500 focus:ring-sky-500 block  rounded-md  focus:ring-1 w-full
     }
 
     .defaultForm {
-      @apply block flex justify-center  mt-5 w-6/12 mx-auto flex-col items-center overflow-hidden
+      @apply  flex justify-center  mt-5  mx-auto flex-col items-center overflow-hidden 
+      w-5/12 border border-indigo-100 pt-5 pb-5
     }
 
     .defaultSpan {
@@ -24,11 +24,11 @@
     }
 
     .formLabel {
-      @apply block w-6/12 mb-6
+      @apply block  mb-8 w-8/12
     }
 
     .defaultSelect {
-      @apply w-full border border-gray-400 rounded p-2 focus:outline-none
+      @apply  border border-gray-400 rounded p-2 focus:outline-none w-full
     }
 
     .defaultTextarea {
