@@ -9,10 +9,10 @@ const FormValidation = yup.object().shape({
     .min(6, 'Şifreniz en az 6 karakterden oluşmalıdır.'),
   sex: yup
     .string()
-    .trim()
+    .required('Lütfen cinsiyetinizi belirtiniz.')
     .test(
-      '1-2',
-      'Cinsiyetiniz belirtiniz',
+      'sex',
+      'Cinsiyetiniz belirtiniz.',
       (value) => value === '1' || value === '2',
     ),
 })

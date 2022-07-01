@@ -22,11 +22,17 @@ const MainForm = () => {
     console.log(JSON.stringify(values, null, 2))
   }
 
+  const cinsiyetOptions = [
+    { id: '1', value: 'Erkek' },
+    { id: '2', value: 'Kadın' },
+  ]
+
   return (
     <Formik
       initialValues={initialValues}
       validationSchema={FormValidation}
       onSubmit={handleSubmit}
+      validateOnMount={true}
     >
       {(props) => (
         <div className="">
@@ -34,7 +40,7 @@ const MainForm = () => {
             <Input label="Email" name="email" type="text" />
             <Input label="Şifre" name="password" type="text" />
 
-            <Select label="Cinsiyet" name="sex" x />
+            <Select label="Cinsiyet" name="sex" options={cinsiyetOptions} />
 
             <Button type="submit" />
           </Form>
