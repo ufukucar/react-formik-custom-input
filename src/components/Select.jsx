@@ -6,20 +6,12 @@ const Select = ({ label, options, ...props }) => {
   const [field, meta, helpers] = useField(props)
 
   // Sayfa yüklendiğinde default değeri '' yapıyoruz
-  useEffect(() => {
-    helpers.setValue(options[0].value)
-  }, [])
 
   return (
     <>
       <label className="formLabel">
         <span className="defaultSpan">{label}</span>
-        <select
-          {...field}
-          name={props.name}
-          className="defaultSelect"
-          defaultValue={field.value}
-        >
+        <select {...field} name={props.name} className="defaultSelect">
           <option value="">-- Seçim Yapınız --</option>
 
           {options.map((option) => {

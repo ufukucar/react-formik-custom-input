@@ -7,8 +7,6 @@ import { MdOutlineCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md'
 const Checkbox = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props)
 
-  console.log('meta', meta)
-
   useEffect(() => {
     helpers.setValue(false)
   }, [])

@@ -16,7 +16,8 @@ const MainForm = () => {
   const initialValues = {
     email: '',
     password: '',
-    cinsiyet: '',
+    gender: '',
+    onay: '',
   }
 
   const handleSubmit = (values, actions) => {
