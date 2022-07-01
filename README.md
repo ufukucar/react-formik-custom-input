@@ -1,2 +1,1 @@
-Formik kullanılmıştır.
-Tailwind CSS kullanılmıştır.
+Formik ve Tailwind CSS kullanılmıştır.
