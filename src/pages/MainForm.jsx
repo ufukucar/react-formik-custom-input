@@ -6,6 +6,7 @@ import FormValidation from '../validations/FormValidation'
 import Input from '../components/Input'
 import Button from '../components/Button'
 import Select from '../components/Select'
+import Checkbox from '../components/Checkbox'
 
 const MainForm = () => {
   useEffect(() => {
@@ -43,7 +44,9 @@ const MainForm = () => {
             <Input label="Email" name="email" type="text" />
             <Input label="Şifre" name="password" type="text" />
 
-            <Select label="Cinsiyet" name="sex" options={cinsiyetOptions} />
+            <Select label="Cinsiyet" name="gender" options={cinsiyetOptions} />
+
+            <Checkbox label="Şartları Kabul Ediyorum" name="onay" />
 
             <Button type="submit" />
           </Form>

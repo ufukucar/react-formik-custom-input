@@ -8,7 +8,7 @@ const FormValidation = yup.object().shape({
     .trim()
     .required('Şifre alanı zorunludur.')
     .min(6, 'Şifreniz en az 6 karakterden oluşmalıdır.'),
-  sex: yup
+  gender: yup
     .mixed()
     .required('Lütfen cinsiyetinizi belirtiniz.')
     .test(
