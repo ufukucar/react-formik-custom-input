@@ -7,10 +7,6 @@ import { MdOutlineCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md'
 const Checkbox = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props)
 
-  useEffect(() => {
-    helpers.setValue(false)
-  }, [])
-
   return (
     <>
       <label className="formLabel  cursor-pointer  ">
@@ -22,7 +18,7 @@ const Checkbox = ({ label, ...props }) => {
           className={`${
             field.value
               ? 'hidden'
-              : 'ml-  mt-1 w-5 h-5 border-b-indigo-400 fill-current '
+              : 'ml-1  mt-1 w-5 h-5 border-b-indigo-400 fill-current '
           }`}
           fill="current-fill"
         />

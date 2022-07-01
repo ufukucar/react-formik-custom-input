@@ -19,6 +19,7 @@ const FormValidation = yup.object().shape({
   onay: yup
     .mixed()
     .test('check', 'Lütfen şartları onaylayınız.', (value) => value === true),
+  bulten: yup.string().required('Bülten almak istiyor musunuz?'),
 })
 
 export default FormValidation
