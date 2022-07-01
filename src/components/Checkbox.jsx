@@ -1,34 +1,37 @@
 import { useField } from 'formik'
 import ErrorMessage from './ErrorMessage'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { MdOutlineCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md'
 
 const Checkbox = ({ label, ...props }) => {
   const [field, meta, helpers] = useField(props)
 
+  console.log('meta', meta)
+
+  useEffect(() => {
+    helpers.setValue(false)
+  }, [])
+
   return (
     <>
-      <label className="formLabel inline-flex cursor-pointer  ">
-        <span className="defaultSpan">{label}</span>
-        <input
-          type="checkbox"
-          {...field}
-          {...props}
-          className=" ml-3 mt-1  hidden"
-        />
+      <label className="formLabel  cursor-pointer  ">
+        <span className="defaultSpan inline-block float-left mr-3">
+          {label}
+        </span>
+        <input type="checkbox" {...field} {...props} className="hidden" />
         <MdOutlineCheckBoxOutlineBlank
           className={`${
             field.value
               ? 'hidden'
-              : 'ml-3 mt-1 w-5 h-5 border-b-indigo-400 fill-current'
+              : 'ml-  mt-1 w-5 h-5 border-b-indigo-400 fill-current '
           }`}
           fill="current-fill"
         />
         <MdCheckBox
           className={`${
             field.value
-              ? 'ml-3 mt-1 w-5 h-5 border-b-indigo-400 fill-blue-700'
+              ? 'ml-5 mt-1 w-5 h-5 border-b-indigo-400 fill-blue-700'
               : 'hidden'
           }`}
         />

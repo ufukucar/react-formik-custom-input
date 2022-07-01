@@ -16,6 +16,9 @@ const FormValidation = yup.object().shape({
       'Cinsiyetiniz belirtiniz.',
       (value) => value === '1' || value === '2',
     ),
+  onay: yup
+    .mixed()
+    .test('check', 'Lütfen şartları onaylayınız.', (value) => value === true),
 })
 
 export default FormValidation
