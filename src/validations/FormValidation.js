@@ -1,14 +1,15 @@
 import * as yup from 'yup'
 
 const FormValidation = yup.object().shape({
-  email: yup.string().required('Email alanı zorunludur.'),
+  email: yup.string().trim().required('Email alanı zorunludur.'),
   // .email('Geçerli bir email adresi giriniz.'),
   password: yup
     .string()
+    .trim()
     .required('Şifre alanı zorunludur.')
     .min(6, 'Şifreniz en az 6 karakterden oluşmalıdır.'),
   sex: yup
-    .string()
+    .mixed()
     .required('Lütfen cinsiyetinizi belirtiniz.')
     .test(
       'sex',

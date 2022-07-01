@@ -32,7 +32,10 @@ const MainForm = () => {
       initialValues={initialValues}
       validationSchema={FormValidation}
       onSubmit={handleSubmit}
-      validateOnMount={true}
+      enableReinitialize={true}
+      // validateOnMount={true}
+      // validateOnChange={false}
+      // validateOnBlur={false}
     >
       {(props) => (
         <div className="">
