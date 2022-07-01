@@ -8,6 +8,7 @@ import Button from '../components/Button'
 import Select from '../components/Select'
 import Checkbox from '../components/Checkbox'
 import Radio from '../components/Radio'
+import Textarea from '../components/Textarea'
 
 const MainForm = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const MainForm = () => {
     gender: '',
     onay: '',
     bulten: '',
+    oneri: '',
   }
 
   const handleSubmit = (values, actions) => {
@@ -61,6 +63,8 @@ const MainForm = () => {
               name="bulten"
               options={radioOptions}
             />
+
+            <Textarea label="Önerileriniz" name="oneri" cols="5" rows="5" />
 
             <Button type="submit" />
           </Form>

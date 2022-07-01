@@ -30,6 +30,10 @@
     .defaultSelect {
       @apply w-full border border-gray-400 rounded p-2 focus:outline-none
     }
+
+    .defaultTextarea {
+      @apply text-md border border-gray-300 w-full rounded p-2 focus:outline-none resize-none font-normal  
+    }
 }
 
 
